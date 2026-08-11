@@ -1,7 +1,7 @@
 import { Testimonial, FacilityService, CafeItem } from '../types';
 
 // Asset references generated using Gemini image generation
-import heroGymFloorImg from '../assets/images/hero_gym_floor_1786389098415.jpg';
+import heroGymFloorImg from '../assets/images/simple_empty_gym_1786485930244.jpg';
 import aboutGymInteriorImg from '../assets/images/about_gym_interior_1786389108258.jpg';
 import strengthZoneImg from '../assets/images/strength_zone_1786389118697.jpg';
 import cafeCounterImg from '../assets/images/cafe_counter_1786389129714.jpg';

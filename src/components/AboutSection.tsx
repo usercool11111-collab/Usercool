@@ -21,12 +21,12 @@ export const AboutSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" /> The Lifetime Experience
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             This Isn't Just a Gym.{' '}
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">It's an Upgrade.</span>
+            <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">It's an Upgrade.</span>
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
             Most gyms feel the same. Crowded. Worn-out equipment. Zero guidance. <strong className="text-white">Lifetime Fitness Club is different.</strong>
@@ -44,32 +44,32 @@ export const AboutSection: React.FC = () => {
               </p>
               
               <p className="text-slate-300 text-base leading-relaxed">
-                Every visit should feel like an investment in yourself. <strong className="text-emerald-400">Not a chore.</strong>
+                Every visit should feel like an investment in yourself. <strong className="text-sky-400">Not a chore.</strong>
               </p>
 
               {/* 4 Pillars Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 p-3.5 rounded-xl">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                   <span className="text-sm font-bold text-white">Hygiene-first environment</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 p-3.5 rounded-xl">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                   <span className="text-sm font-bold text-white">Certified, hands-on trainers</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 p-3.5 rounded-xl">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                   <span className="text-sm font-bold text-white">Zero waiting, zero crowding</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 p-3.5 rounded-xl">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-sky-400 shrink-0" />
                   <span className="text-sm font-bold text-white">A vibe that keeps you coming back</span>
                 </div>
               </div>
 
               {/* Tagline Banner */}
-              <div className="p-4 bg-gradient-to-r from-emerald-600/20 via-emerald-600/10 to-transparent border-l-4 border-emerald-500 rounded-r-xl">
-                <p className="text-lg font-black text-emerald-300 italic">
+              <div className="p-4 bg-gradient-to-r from-sky-600/20 via-sky-600/10 to-transparent border-l-4 border-sky-500 rounded-r-xl">
+                <p className="text-lg font-black text-sky-300 italic">
                   "This is fitness, the way it should feel."
                 </p>
               </div>
@@ -81,10 +81,10 @@ export const AboutSection: React.FC = () => {
             <div className="bg-[#05070A] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
               <div className="bg-white/5 px-6 py-4 border-b border-white/10 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Trophy className="w-5 h-5 text-emerald-400" />
+                  <Trophy className="w-5 h-5 text-sky-400" />
                   <span className="font-bold text-white text-sm">Lifetime Upgrade Difference</span>
                 </div>
-                <span className="text-xs text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                <span className="text-xs text-sky-400 font-bold bg-sky-500/10 border border-sky-500/20 px-2.5 py-1 rounded-full">
                   Malviya Nagar, Jaipur
                 </span>
               </div>
@@ -96,7 +96,7 @@ export const AboutSection: React.FC = () => {
                     onClick={() => setActiveTab('hygiene')}
                     className={`py-2 px-3 text-xs font-bold rounded-lg transition-colors ${
                       activeTab === 'hygiene'
-                        ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]'
+                        ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]'
                         : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
@@ -106,7 +106,7 @@ export const AboutSection: React.FC = () => {
                     onClick={() => setActiveTab('coaching')}
                     className={`py-2 px-3 text-xs font-bold rounded-lg transition-colors ${
                       activeTab === 'coaching'
-                        ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]'
+                        ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]'
                         : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
@@ -116,7 +116,7 @@ export const AboutSection: React.FC = () => {
                     onClick={() => setActiveTab('equipment')}
                     className={`py-2 px-3 text-xs font-bold rounded-lg transition-colors ${
                       activeTab === 'equipment'
-                        ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]'
+                        ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]'
                         : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
@@ -126,7 +126,7 @@ export const AboutSection: React.FC = () => {
                     onClick={() => setActiveTab('vibe')}
                     className={`py-2 px-3 text-xs font-bold rounded-lg transition-colors ${
                       activeTab === 'vibe'
-                        ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]'
+                        ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]'
                         : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
@@ -138,8 +138,8 @@ export const AboutSection: React.FC = () => {
                 <div className="space-y-4 pt-2">
                   {activeTab === 'hygiene' && (
                     <div className="space-y-4 animate-in fade-in duration-300">
-                      <div className="p-4 bg-white/5 rounded-xl border border-emerald-500/30">
-                        <div className="text-xs uppercase font-bold text-emerald-400 mb-1">Lifetime Standard</div>
+                      <div className="p-4 bg-white/5 rounded-xl border border-sky-500/30">
+                        <div className="text-xs uppercase font-bold text-sky-400 mb-1">Lifetime Standard</div>
                         <div className="text-sm font-bold text-white">Daily Deep Sanitization & Pristine Washrooms</div>
                         <p className="text-xs text-slate-300 mt-1">Dedicated house staff sanitize machine handles, floor mats, and locker room washrooms hourly.</p>
                       </div>
@@ -152,8 +152,8 @@ export const AboutSection: React.FC = () => {
 
                   {activeTab === 'coaching' && (
                     <div className="space-y-4 animate-in fade-in duration-300">
-                      <div className="p-4 bg-white/5 rounded-xl border border-emerald-500/30">
-                        <div className="text-xs uppercase font-bold text-emerald-400 mb-1">Lifetime Standard</div>
+                      <div className="p-4 bg-white/5 rounded-xl border border-sky-500/30">
+                        <div className="text-xs uppercase font-bold text-sky-400 mb-1">Lifetime Standard</div>
                         <div className="text-sm font-bold text-white">Hands-on Form Checks & Humble Mentorship</div>
                         <p className="text-xs text-slate-300 mt-1">Coaches like Ajay Sir actively monitor your posture, prevent injuries, and craft custom routine splits.</p>
                       </div>
@@ -166,8 +166,8 @@ export const AboutSection: React.FC = () => {
 
                   {activeTab === 'equipment' && (
                     <div className="space-y-4 animate-in fade-in duration-300">
-                      <div className="p-4 bg-white/5 rounded-xl border border-emerald-500/30">
-                        <div className="text-xs uppercase font-bold text-emerald-400 mb-1">Lifetime Standard</div>
+                      <div className="p-4 bg-white/5 rounded-xl border border-sky-500/30">
+                        <div className="text-xs uppercase font-bold text-sky-400 mb-1">Lifetime Standard</div>
                         <div className="text-sm font-bold text-white">Smooth Biomechanical Hammer Strength Equipment</div>
                         <p className="text-xs text-slate-300 mt-1">Perfect resistance curves targeting exact muscle fiber contraction for fast hypertrophy.</p>
                       </div>
@@ -180,8 +180,8 @@ export const AboutSection: React.FC = () => {
 
                   {activeTab === 'vibe' && (
                     <div className="space-y-4 animate-in fade-in duration-300">
-                      <div className="p-4 bg-white/5 rounded-xl border border-emerald-500/30">
-                        <div className="text-xs uppercase font-bold text-emerald-400 mb-1">Lifetime Standard</div>
+                      <div className="p-4 bg-white/5 rounded-xl border border-sky-500/30">
+                        <div className="text-xs uppercase font-bold text-sky-400 mb-1">Lifetime Standard</div>
                         <div className="text-sm font-bold text-white">High-Energy Motivational Atmosphere + Gym Café</div>
                         <p className="text-xs text-slate-300 mt-1">Disciplined members, focused lighting, energetic beats, and post-workout protein smoothies.</p>
                       </div>
@@ -204,7 +204,7 @@ export const AboutSection: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#05070A] via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs">
                     <span className="font-bold text-white">3rd Floor, V Cube • 8,000+ sq ft Space</span>
-                    <span className="text-emerald-400 font-bold">Open Daily 5 AM - 11 PM</span>
+                    <span className="text-sky-400 font-bold">Open Daily 5 AM - 11 PM</span>
                   </div>
                 </div>
 

@@ -18,12 +18,12 @@ export const TestimonialsSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-            <Star className="w-4 h-4 fill-emerald-400" /> Real Google Feedback
+          <div className="inline-flex items-center gap-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            <Star className="w-4 h-4 fill-sky-400 text-sky-400" /> Real Google Feedback
           </div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
-            ⭐ 4.9 out of 5 — <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Rated by 745+ Happy Members</span>
+            ⭐ 4.9 out of 5 — <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">Rated by 745+ Happy Members</span>
           </h2>
           
           <p className="text-slate-300 text-base sm:text-lg">
@@ -44,9 +44,9 @@ export const TestimonialsSection: React.FC = () => {
               </svg>
             </div>
             <div>
-              <div className="flex items-center justify-center sm:justify-start gap-1 text-emerald-400 mb-1">
+              <div className="flex items-center justify-center sm:justify-start gap-1 text-sky-400 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-emerald-400 text-emerald-400" />
+                  <Star key={i} className="w-5 h-5 fill-sky-400 text-sky-400" />
                 ))}
                 <span className="ml-2 font-black text-white text-lg">4.9 / 5.0</span>
               </div>
@@ -60,10 +60,10 @@ export const TestimonialsSection: React.FC = () => {
             href="https://maps.google.com/?q=Lifetime+Fitness+Club+Malviya+Nagar+Jaipur"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 bg-white/5 border border-white/10 hover:border-emerald-400 text-white hover:text-emerald-400 text-xs font-bold px-4 py-2.5 rounded-full transition-all flex items-center gap-2"
+            className="shrink-0 bg-white/5 border border-white/10 hover:border-sky-400 text-white hover:text-sky-400 text-xs font-bold px-4 py-2.5 rounded-full transition-all flex items-center gap-2"
           >
             <span>Verify on Google Maps</span>
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+            <Sparkles className="w-3.5 h-3.5 text-sky-400" />
           </a>
         </div>
 
@@ -71,24 +71,24 @@ export const TestimonialsSection: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
           <button
             onClick={() => setActiveFilter('all')}
-            className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors ${
-              activeFilter === 'all' ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white/5 text-slate-400 border border-white/10'
+            className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors cursor-pointer ${
+              activeFilter === 'all' ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]' : 'bg-white/5 text-slate-400 border border-white/10'
             }`}
           >
             All Top Reviews ({TESTIMONIALS.length})
           </button>
           <button
             onClick={() => setActiveFilter('hygiene')}
-            className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors ${
-              activeFilter === 'hygiene' ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white/5 text-slate-400 border border-white/10'
+            className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors cursor-pointer ${
+              activeFilter === 'hygiene' ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]' : 'bg-white/5 text-slate-400 border border-white/10'
             }`}
           >
             ✨ Hygiene & Equipment
           </button>
           <button
             onClick={() => setActiveFilter('trainer')}
-            className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors ${
-              activeFilter === 'trainer' ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white/5 text-slate-400 border border-white/10'
+            className={`px-4 py-1.5 rounded-full text-xs font-bold transition-colors cursor-pointer ${
+              activeFilter === 'trainer' ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]' : 'bg-white/5 text-slate-400 border border-white/10'
             }`}
           >
             🏋️ Coaches & Guidance
@@ -100,16 +100,16 @@ export const TestimonialsSection: React.FC = () => {
           {filteredReviews.map((review) => (
             <div
               key={review.id}
-              className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl relative flex flex-col justify-between hover:border-emerald-500/30 transition-all group"
+              className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl relative flex flex-col justify-between hover:border-sky-500/30 transition-all group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-1 text-emerald-400">
+                  <div className="flex items-center gap-1 text-sky-400">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-emerald-400 text-emerald-400" />
+                      <Star key={i} className="w-4 h-4 fill-sky-400 text-sky-400" />
                     ))}
                   </div>
-                  <Quote className="w-8 h-8 text-white/10 group-hover:text-emerald-500/20 transition-colors" />
+                  <Quote className="w-8 h-8 text-white/10 group-hover:text-sky-500/20 transition-colors" />
                 </div>
 
                 <p className="text-slate-200 text-sm leading-relaxed mb-6 font-medium italic">
@@ -119,14 +119,14 @@ export const TestimonialsSection: React.FC = () => {
 
               {/* Author Footer */}
               <div className="pt-4 border-t border-white/10 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-600 font-bold text-white flex items-center justify-center text-sm shrink-0 shadow-[0_0_10px_rgba(16,185,129,0.5)]">
+                <div className="w-10 h-10 rounded-full bg-sky-500 font-black text-slate-950 flex items-center justify-center text-sm shrink-0 shadow-[0_0_10px_rgba(56,189,248,0.5)]">
                   {review.author.charAt(0)}
                 </div>
                 <div className="overflow-hidden">
                   <div className="flex items-center gap-1.5">
                     <span className="font-bold text-white text-sm truncate">{review.author}</span>
                     {review.verified && (
-                      <CheckCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <CheckCircle className="w-3.5 h-3.5 text-sky-400 shrink-0" />
                     )}
                   </div>
                   <div className="text-xs text-slate-400 truncate">

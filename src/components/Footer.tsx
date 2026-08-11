@@ -1,5 +1,6 @@
 import React from 'react';
 import { GYM_INFO } from '../data/gymData';
+import { LifetimeLogo } from './Logo';
 import { MapPin, Clock, Phone, Star, Navigation, Calendar, MessageCircle } from 'lucide-react';
 
 interface FooterProps {
@@ -20,33 +21,23 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
             {/* Brand Title */}
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-9 h-9 rounded-full bg-emerald-600 font-bold text-white text-lg flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.5)] italic">
-                  L
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold italic tracking-tight text-white uppercase">
-                    Lifetime <span className="text-emerald-500">Fitness Club</span>
-                  </h3>
-                  <p className="text-xs text-emerald-400 font-bold tracking-wider uppercase">
-                    Premium Luxury Gym & Fitness Centre
-                  </p>
-                </div>
+                <LifetimeLogo size="lg" />
               </div>
-              <p className="text-sm text-slate-400 max-w-md pt-2">
-                Jaipur's premier gym space combining strength training, high-tech cardio, expert yoga, personalized diet planning, and a protein cafe.
+              <p className="text-sm text-slate-400 max-w-md pt-1">
+                Jaipur's premier luxury gym space combining strength training, high-tech cardio, expert yoga, personalized diet planning, and a protein cafe.
               </p>
             </div>
 
             {/* Address & Info Cards */}
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3 bg-white/5 border border-white/10 backdrop-blur-md p-4 rounded-xl">
-                <MapPin className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
                 <div className="text-sm">
                   <span className="font-bold text-white block mb-0.5">Address:</span>
                   <span className="text-slate-300 leading-relaxed block">
                     {GYM_INFO.address}
                   </span>
-                  <span className="text-xs text-emerald-400 font-medium mt-1 block">
+                  <span className="text-xs text-sky-400 font-medium mt-1 block">
                     ({GYM_INFO.landmarks})
                   </span>
                 </div>
@@ -54,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md p-3.5 rounded-xl">
-                  <Clock className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <Clock className="w-5 h-5 text-sky-400 shrink-0" />
                   <div className="text-xs">
                     <span className="font-bold text-white block">Timings:</span>
                     <span className="text-slate-300">{GYM_INFO.timings}</span>
@@ -62,10 +53,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
                 </div>
 
                 <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md p-3.5 rounded-xl">
-                  <Phone className="w-5 h-5 text-emerald-400 shrink-0" />
+                  <Phone className="w-5 h-5 text-sky-400 shrink-0" />
                   <div className="text-xs">
                     <span className="font-bold text-white block">Call Now:</span>
-                    <a href={`tel:${GYM_INFO.phoneFormatted}`} className="text-emerald-400 font-bold hover:underline">
+                    <a href={`tel:${GYM_INFO.phoneFormatted}`} className="text-sky-400 font-bold hover:underline">
                       {GYM_INFO.phone}
                     </a>
                   </div>
@@ -74,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
 
               {/* Rating Strip */}
               <div className="flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-md p-3.5 rounded-xl text-sm">
-                <Star className="w-4 h-4 fill-emerald-400 text-emerald-400 shrink-0" />
+                <Star className="w-4 h-4 fill-sky-400 text-sky-400 shrink-0" />
                 <span className="font-bold text-white">4.9 Rating</span>
                 <span className="text-white/20">•</span>
                 <span className="text-slate-300 font-medium">745+ Reviews on Google</span>
@@ -85,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
             <div className="pt-2 flex flex-wrap gap-3">
               <button
                 onClick={onOpenTrialModal}
-                className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] flex items-center gap-1.5"
+                className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-black px-5 py-2.5 rounded-full text-sm transition-all shadow-[0_0_20px_rgba(56,189,248,0.4)] flex items-center gap-1.5 cursor-pointer"
               >
                 <span>👉 Book Free Trial</span>
               </button>
@@ -96,7 +87,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
                 rel="noopener noreferrer"
                 className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold px-4 py-2.5 rounded-full text-sm transition-colors flex items-center gap-1.5"
               >
-                <Navigation className="w-4 h-4 text-emerald-400" />
+                <Navigation className="w-4 h-4 text-sky-400" />
                 <span>👉 Get Directions</span>
               </a>
 
@@ -104,7 +95,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
                 href={`tel:${GYM_INFO.phoneFormatted}`}
                 className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold px-4 py-2.5 rounded-full text-sm transition-colors flex items-center gap-1.5"
               >
-                <Phone className="w-4 h-4 text-emerald-400" />
+                <Phone className="w-4 h-4 text-sky-400" />
                 <span>👉 Call Now</span>
               </a>
             </div>
@@ -115,9 +106,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
           <div className="lg:col-span-6 space-y-4">
             <div className="flex items-center justify-between">
               <h4 className="text-base font-bold text-white flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-emerald-400" /> Malviya Nagar Location Map
+                <MapPin className="w-4 h-4 text-sky-400" /> Malviya Nagar Location Map
               </h4>
-              <span className="text-xs text-emerald-400 font-medium">V Cube 3rd Floor</span>
+              <span className="text-xs text-sky-400 font-medium">V Cube 3rd Floor</span>
             </div>
 
             {/* Google Map iFrame Container */}
@@ -142,7 +133,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
                   href={GYM_INFO.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-emerald-600 text-white font-bold px-3 py-1.5 rounded-full shrink-0 text-xs shadow-[0_0_10px_rgba(16,185,129,0.4)]"
+                  className="bg-sky-500 text-slate-950 font-black px-3 py-1.5 rounded-full shrink-0 text-xs shadow-[0_0_10px_rgba(56,189,248,0.4)]"
                 >
                   Open Maps
                 </a>

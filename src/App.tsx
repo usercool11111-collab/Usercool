@@ -14,7 +14,7 @@ export default function App() {
   const [trialModalOpen, setTrialModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#05070A] text-slate-100 font-sans antialiased selection:bg-emerald-600 selection:text-white pb-16 md:pb-0">
+    <div className="min-h-screen bg-[#05070A] text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-slate-950 pb-16 md:pb-0">
       
       {/* Top Header & Sticky Navigation */}
       <Header onOpenTrialModal={() => setTrialModalOpen(true)} />

@@ -16,7 +16,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
   const roundedBmi = Math.round(bmi * 10) / 10;
 
   let bmiCategory = 'Normal';
-  let categoryColor = 'text-emerald-400';
+  let categoryColor = 'text-sky-400';
   if (bmi < 18.5) {
     bmiCategory = 'Underweight';
     categoryColor = 'text-amber-400';
@@ -40,7 +40,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
           
           {/* Header */}
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3.5 py-1 rounded-full text-xs font-bold uppercase">
+            <div className="inline-flex items-center gap-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 px-3.5 py-1 rounded-full text-xs font-bold uppercase">
               <Calculator className="w-3.5 h-3.5" /> Interactive Fitness Planner
             </div>
             <h3 className="text-2xl sm:text-3xl font-black text-white">
@@ -62,24 +62,24 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
                 <div className="grid grid-cols-3 gap-2">
                   <button
                     onClick={() => setGoal('muscle')}
-                    className={`py-2 px-2 rounded-full text-xs font-bold transition-all ${
-                      goal === 'muscle' ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
+                    className={`py-2 px-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                      goal === 'muscle' ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]' : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
                     💪 Muscle Gain
                   </button>
                   <button
                     onClick={() => setGoal('fatloss')}
-                    className={`py-2 px-2 rounded-full text-xs font-bold transition-all ${
-                      goal === 'fatloss' ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
+                    className={`py-2 px-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                      goal === 'fatloss' ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]' : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
                     🔥 Fat Loss
                   </button>
                   <button
                     onClick={() => setGoal('maintenance')}
-                    className={`py-2 px-2 rounded-full text-xs font-bold transition-all ${
-                      goal === 'maintenance' ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
+                    className={`py-2 px-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                      goal === 'maintenance' ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]' : 'bg-white/5 text-slate-400 hover:text-white border border-white/5'
                     }`}
                   >
                     🧘 Mobility/Fit
@@ -91,7 +91,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
                   <span className="font-bold text-slate-300">Body Weight:</span>
-                  <span className="font-black text-emerald-400">{weight} kg</span>
+                  <span className="font-black text-sky-400">{weight} kg</span>
                 </div>
                 <input
                   type="range"
@@ -99,7 +99,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
                   max="140"
                   value={weight}
                   onChange={(e) => setWeight(Number(e.target.value))}
-                  className="w-full accent-emerald-500 cursor-pointer h-2 bg-white/10 rounded-lg"
+                  className="w-full accent-sky-400 cursor-pointer h-2 bg-white/10 rounded-lg"
                 />
               </div>
 
@@ -107,7 +107,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
                   <span className="font-bold text-slate-300">Height:</span>
-                  <span className="font-black text-emerald-400">{height} cm</span>
+                  <span className="font-black text-sky-400">{height} cm</span>
                 </div>
                 <input
                   type="range"
@@ -115,7 +115,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
                   max="210"
                   value={height}
                   onChange={(e) => setHeight(Number(e.target.value))}
-                  className="w-full accent-emerald-500 cursor-pointer h-2 bg-white/10 rounded-lg"
+                  className="w-full accent-sky-400 cursor-pointer h-2 bg-white/10 rounded-lg"
                 />
               </div>
 
@@ -133,13 +133,13 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
 
                 <div className="bg-white/5 p-4 rounded-xl border border-white/10">
                   <div className="text-xs text-slate-400 font-medium">Daily Protein Goal</div>
-                  <div className="text-2xl font-black text-emerald-400">{dailyProtein}g</div>
+                  <div className="text-2xl font-black text-sky-400">{dailyProtein}g</div>
                   <div className="text-[11px] text-slate-400">Target isolate/food</div>
                 </div>
               </div>
 
-              <div className="p-4 bg-white/5 rounded-xl border border-emerald-500/20 space-y-2">
-                <div className="flex items-center gap-2 text-xs font-bold text-emerald-400">
+              <div className="p-4 bg-white/5 rounded-xl border border-sky-500/20 space-y-2">
+                <div className="flex items-center gap-2 text-xs font-bold text-sky-400">
                   <Dumbbell className="w-4 h-4" /> Lifetime Recommended Routine
                 </div>
                 <p className="text-xs text-slate-300">
@@ -151,7 +151,7 @@ export const BmiCalculator: React.FC<BmiCalculatorProps> = ({ onOpenTrialModal }
 
               <button
                 onClick={onOpenTrialModal}
-                className="w-full bg-emerald-600 text-white font-bold py-3 rounded-full text-xs sm:text-sm shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:bg-emerald-500 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-sky-500 text-slate-950 font-black py-3 rounded-full text-xs sm:text-sm shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:bg-sky-400 transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>👉 Get Trainer Guidance During Free Trial</span>
                 <ArrowRight className="w-4 h-4" />

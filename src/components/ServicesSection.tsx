@@ -14,12 +14,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
 
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Dumbbell': return <Dumbbell className="w-6 h-6 text-emerald-400" />;
-      case 'Activity': return <Activity className="w-6 h-6 text-emerald-400" />;
-      case 'Sparkles': return <Sparkles className="w-6 h-6 text-emerald-400" />;
-      case 'Coffee': return <Coffee className="w-6 h-6 text-emerald-400" />;
-      case 'ClipboardCheck': return <ClipboardCheck className="w-6 h-6 text-emerald-400" />;
-      default: return <Dumbbell className="w-6 h-6 text-emerald-400" />;
+      case 'Dumbbell': return <Dumbbell className="w-6 h-6 text-sky-400" />;
+      case 'Activity': return <Activity className="w-6 h-6 text-sky-400" />;
+      case 'Sparkles': return <Sparkles className="w-6 h-6 text-sky-400" />;
+      case 'Coffee': return <Coffee className="w-6 h-6 text-sky-400" />;
+      case 'ClipboardCheck': return <ClipboardCheck className="w-6 h-6 text-sky-400" />;
+      default: return <Dumbbell className="w-6 h-6 text-sky-400" />;
     }
   };
 
@@ -33,12 +33,12 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
         
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 bg-sky-500/10 text-sky-400 border border-sky-500/20 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
             🏋️ World-Class Amenities
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             Everything You Need.{' '}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-white bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-white bg-clip-text text-transparent">
               Under One Roof.
             </span>
           </h2>
@@ -55,13 +55,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
             return (
               <div
                 key={service.id}
-                className={`group relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between ${
+                className={`group relative bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl hover:border-sky-500/40 transition-all duration-300 flex flex-col justify-between ${
                   index === 4 ? 'md:col-span-2 lg:col-span-1' : ''
                 }`}
               >
                 {/* Image & Overlay */}
                 <div>
-                  <div className="relative h-56 overflow-hidden rounded-t-2xl border-b border-white/10 group-hover:border-emerald-500/30 transition-colors">
+                  <div className="relative h-56 overflow-hidden rounded-t-2xl border-b border-white/10 group-hover:border-sky-500/30 transition-colors">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -71,17 +71,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                     <div className="absolute inset-0 bg-gradient-to-t from-[#05070A] via-[#05070A]/40 to-transparent group-hover:via-[#05070A]/20 transition-all duration-500" />
                     
                     {/* Glowing Accent Ring on Hover */}
-                    <div className="absolute inset-0 ring-1 ring-white/10 group-hover:ring-emerald-500/40 rounded-t-2xl transition-all duration-300 pointer-events-none" />
+                    <div className="absolute inset-0 ring-1 ring-white/10 group-hover:ring-sky-500/40 rounded-t-2xl transition-all duration-300 pointer-events-none" />
                     
                     {/* Icon Badge */}
-                    <div className="absolute top-4 left-4 bg-[#05070A]/85 backdrop-blur-md p-3 rounded-xl border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.2)] group-hover:border-emerald-400 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all">
+                    <div className="absolute top-4 left-4 bg-[#05070A]/85 backdrop-blur-md p-3 rounded-xl border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.2)] group-hover:border-sky-400 group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all">
                       {getServiceIcon(service.icon)}
                     </div>
 
                     {isCafe && (
                       <button
                         onClick={() => setShowCafeMenuModal(true)}
-                        className="absolute bottom-3 right-3 bg-emerald-600 text-white font-bold px-3 py-1.5 rounded-full text-xs shadow-lg hover:bg-emerald-500 transition-colors flex items-center gap-1"
+                        className="absolute bottom-3 right-3 bg-sky-500 text-slate-950 font-bold px-3 py-1.5 rounded-full text-xs shadow-lg hover:bg-sky-400 transition-colors flex items-center gap-1 cursor-pointer"
                       >
                         <Coffee className="w-3.5 h-3.5" /> View Café Menu
                       </button>
@@ -90,7 +90,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
 
                   {/* Body Content */}
                   <div className="p-6 space-y-4">
-                    <h3 className="text-xl font-black text-white group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-xl font-black text-white group-hover:text-sky-400 transition-colors">
                       {service.title}
                     </h3>
                     
@@ -102,7 +102,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                     <ul className="space-y-2 pt-2 border-t border-white/10">
                       {service.features.map((feat, idx) => (
                         <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                          <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                          <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -120,7 +120,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                         setSelectedService(service);
                       }
                     }}
-                    className="w-full py-2.5 px-4 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white rounded-full text-xs font-bold transition-all flex items-center justify-center gap-2 border border-white/10"
+                    className="w-full py-2.5 px-4 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white rounded-full text-xs font-bold transition-all flex items-center justify-center gap-2 border border-white/10 cursor-pointer"
                   >
                     <span>{isCafe ? 'Explore Nutrition Café Menu' : 'View Facility Details'}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -132,14 +132,14 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
         </div>
 
         {/* Action Banner below services */}
-        <div className="mt-16 bg-gradient-to-r from-emerald-600/20 via-teal-600/20 to-emerald-600/20 border border-emerald-500/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl backdrop-blur-md">
+        <div className="mt-16 bg-gradient-to-r from-sky-950/60 via-sky-900/40 to-sky-950/60 border border-sky-500/30 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl backdrop-blur-md">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="text-xl font-black text-white">Experience all facilities during your 1-Day Trial</h4>
             <p className="text-sm text-slate-300">No payment required. Get guided by our certified coaches from day one.</p>
           </div>
           <button
             onClick={onOpenTrialModal}
-            className="shrink-0 bg-emerald-600 text-white font-bold px-6 py-3 rounded-full text-sm shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:bg-emerald-500 transition-colors"
+            className="shrink-0 bg-sky-500 text-slate-950 font-black px-6 py-3 rounded-full text-sm shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:bg-sky-400 transition-colors cursor-pointer"
           >
             👉 Book Free Trial Now
           </button>
@@ -177,11 +177,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
               </p>
 
               <div className="bg-white/5 p-4 rounded-xl border border-white/10 space-y-2">
-                <div className="text-xs font-bold uppercase text-emerald-400">Included Amenities</div>
+                <div className="text-xs font-bold uppercase text-sky-400">Included Amenities</div>
                 <ul className="space-y-2">
                   {selectedService.features.map((f, i) => (
                     <li key={i} className="flex items-center gap-2 text-xs text-slate-200">
-                      <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                      <ShieldCheck className="w-4 h-4 text-sky-400" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -195,7 +195,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                   setSelectedService(null);
                   onOpenTrialModal();
                 }}
-                className="flex-1 bg-emerald-600 text-white font-bold py-3 rounded-full text-center text-sm shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:bg-emerald-500"
+                className="flex-1 bg-sky-500 text-slate-950 font-black py-3 rounded-full text-center text-sm shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:bg-sky-400 cursor-pointer"
               >
                 👉 Claim Free Trial for {selectedService.title}
               </button>
@@ -216,7 +216,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
             </button>
 
             <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-              <div className="p-2.5 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
+              <div className="p-2.5 bg-sky-500/10 text-sky-400 rounded-xl border border-sky-500/20">
                 <Coffee className="w-6 h-6" />
               </div>
               <div>
@@ -231,9 +231,9 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                 <button
                   key={cat}
                   onClick={() => setSelectedCafeCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-bold rounded-full transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
                     selectedCafeCategory === cat
-                      ? 'bg-emerald-600 text-white shadow-[0_0_15px_rgba(16,185,129,0.4)]'
+                      ? 'bg-sky-500 text-slate-950 shadow-[0_0_15px_rgba(56,189,248,0.4)]'
                       : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/5'
                   }`}
                 >
@@ -255,7 +255,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                   <div className="space-y-1">
                     <div className="text-sm font-bold text-white leading-tight">{item.name}</div>
                     <div className="flex items-center gap-2 text-[11px]">
-                      <span className="bg-emerald-500/10 text-emerald-400 font-bold px-1.5 py-0.5 rounded border border-emerald-500/20">
+                      <span className="bg-sky-500/10 text-sky-400 font-bold px-1.5 py-0.5 rounded border border-sky-500/20">
                         {item.protein}
                       </span>
                       <span className="text-slate-400 flex items-center gap-0.5">
@@ -275,7 +275,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
                   setShowCafeMenuModal(false);
                   onOpenTrialModal();
                 }}
-                className="bg-emerald-600 text-white font-bold px-4 py-2 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.4)]"
+                className="bg-sky-500 text-slate-950 font-black px-4 py-2 rounded-full shadow-[0_0_15px_rgba(56,189,248,0.4)] cursor-pointer"
               >
                 Book 1-Day Trial
               </button>
