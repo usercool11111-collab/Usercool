@@ -1,0 +1,6 @@
+{
+  "name": "Lifetime Fitness Club",
+  "description": "Jaipur's Most Premium Fitness Experience in Malviya Nagar. Strength training, advanced cardio, expert yoga, and premium gym cafe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
