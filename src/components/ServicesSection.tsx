@@ -61,17 +61,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenTrialMod
               >
                 {/* Image & Overlay */}
                 <div>
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-56 overflow-hidden rounded-t-2xl border-b border-white/10 group-hover:border-emerald-500/30 transition-colors">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 brightness-90 group-hover:brightness-105 filter drop-shadow-md"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#05070A] via-[#05070A]/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#05070A] via-[#05070A]/40 to-transparent group-hover:via-[#05070A]/20 transition-all duration-500" />
+                    
+                    {/* Glowing Accent Ring on Hover */}
+                    <div className="absolute inset-0 ring-1 ring-white/10 group-hover:ring-emerald-500/40 rounded-t-2xl transition-all duration-300 pointer-events-none" />
                     
                     {/* Icon Badge */}
-                    <div className="absolute top-4 left-4 bg-[#05070A]/80 backdrop-blur-md p-3 rounded-xl border border-emerald-500/30 shadow-lg">
+                    <div className="absolute top-4 left-4 bg-[#05070A]/85 backdrop-blur-md p-3 rounded-xl border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.2)] group-hover:border-emerald-400 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all">
                       {getServiceIcon(service.icon)}
                     </div>
 

@@ -5,16 +5,18 @@ import heroGymFloorImg from '../assets/images/hero_gym_floor_1786389098415.jpg';
 import aboutGymInteriorImg from '../assets/images/about_gym_interior_1786389108258.jpg';
 import strengthZoneImg from '../assets/images/strength_zone_1786389118697.jpg';
 import cafeCounterImg from '../assets/images/cafe_counter_1786389129714.jpg';
+import cardioZoneImg from '../assets/images/cardio_zone_image_1786484359257.jpg';
+import yogaStudioImg from '../assets/images/yoga_studio_image_1786484371048.jpg';
+import dietConsultImg from '../assets/images/diet_consult_image_1786484382838.jpg';
 
 export const GYM_IMAGES = {
   hero: heroGymFloorImg,
   about: aboutGymInteriorImg,
   strength: strengthZoneImg,
   cafe: cafeCounterImg,
-  // High quality Unsplash backups for cardio, yoga, diet
-  cardio: 'https://images.unsplash.com/photo-1576678927484-cc909957088c?auto=format&fit=crop&q=80&w=1200',
-  yoga: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1200',
-  diet: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=1200',
+  cardio: cardioZoneImg,
+  yoga: yogaStudioImg,
+  diet: dietConsultImg,
 };
 
 export const GYM_INFO = {
